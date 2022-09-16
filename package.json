@@ -12,6 +12,7 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
+		"@beyonk/svelte-mapbox": "^8.1.4",
 		"@iconify/svelte": "^3.0.0",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
@@ -34,6 +35,8 @@
 	"dependencies": {
 		"@imask/svelte": "^6.4.3-alpha.0",
 		"axios": "^0.27.2",
+		"svelte-google-maps": "^0.2.0",
+		"svelte-imask": "^1.2.0",
 		"svelte-locomotive-scroll": "^0.0.5",
 		"tw-elements": "^1.0.0-alpha12"
 	}

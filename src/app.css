@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 body {
+	background-color: #f3f6fb;
 	color: #33415c;
 	font-family: 'Montserrat', sans-serif;
 }

@@ -38,10 +38,30 @@
 		}
 	];
 	const items = [
-		{ id: 1, name: 'Поддерживающая', text: 'Вернем жилищу уют и сияющую чистоту. ', price: '1800₽ ' },
-		{ id: 2, name: 'Генеральная', text: 'Чистота может быть идеальной', price: '170-200₽  м<sup>2</sup>' },
-		{ id: 3, name: 'После ремонта', text: 'Уберем всю пыль и грязь после ремонта', price: '350-400₽  м<sup>2</sup>' },
-		{ id: 4, name: 'Мытье окон', text: 'Смотрите на мир через чистые окна!', price: '250₽  м<sup>2</sup>' }
+		{
+			id: 1,
+			name: 'Поддерживающая',
+			text: 'Вернем жилищу уют и сияющую чистоту. ',
+			price: '1800₽ '
+		},
+		{
+			id: 2,
+			name: 'Генеральная',
+			text: 'Чистота может быть идеальной',
+			price: '170-200₽  м<sup>2</sup>'
+		},
+		{
+			id: 3,
+			name: 'После ремонта',
+			text: 'Уберем всю пыль и грязь после ремонта',
+			price: '350-400₽  м<sup>2</sup>'
+		},
+		{
+			id: 4,
+			name: 'Мытье окон',
+			text: 'Смотрите на мир через чистые окна!',
+			price: '250₽  м<sup>2</sup>'
+		}
 	];
 </script>
 
@@ -50,19 +70,21 @@
 
 <div
 	data-scroll-section
-	class="sm:mx-32 mx-4 sm:pt-14 sm:flex items-center sm:pb-32 justify-between"
+	class="bg-white"
 >
-	<div>
-		<h1 class="sm:text-5xl mt-20 sm:mt-0 text-3xl font-medium">
-			Профессиональные <br />клининговые <br /> услуги в Омске
-		</h1>
-		<p class="sm:mt-12 mt-4 sm:text-lg">
-			Стабильно высокое качество уборок <br /> для частных лиц и бизнеса на лучших условиях
-			<br /><span class="sm:flex hidden">в СНГ с гарантией по договору</span>
-		</p>
-	</div>
-	<div>
-		<img class=" sm:mt-0 mt-6" src={main1} alt="" />
+	<div class="sm:mx-32 mx-4  sm:pt-14 sm:flex items-center sm:pb-32 justify-between">
+		<div class="">
+			<h1 class="sm:text-5xl mt-20 sm:mt-0 text-3xl font-medium">
+				Профессиональные <br />клининговые <br /> услуги в Омске
+			</h1>
+			<p class="sm:mt-12 mt-4 sm:text-lg">
+				Стабильно высокое качество уборок <br /> для частных лиц и бизнеса на лучших условиях
+				<br /><span class="sm:flex hidden">в СНГ с гарантией по договору</span>
+			</p>
+		</div>
+		<div>
+			<img class=" sm:mt-0 mt-6" src={main1} alt="" />
+		</div>
 	</div>
 </div>
 
@@ -95,7 +117,7 @@
 			{/each}
 		</div>
 	</div>
-	<Main2/>
+	<Main2 />
 	<div data-scroll-section class="sm:h-screen bg-[#F3F6FB] sm:flex sm:gap-32 ">
 		<div class="sm:mx-32 mx-4 sm:w-full pt-16 pb-8 sm:py-0  sm:items-center sm:flex">
 			<div class="sm:w-1/2">
@@ -139,9 +161,7 @@
 		<div class="sm:mx-32  pb-8 sm:py-0  mx-4 sm:pt-36">
 			<div class=" sm:flex sm:justify-between sm:items-end">
 				<div>
-					<h2 class="font-medium text-3xl sm:text-[40px] sm:leading-[2.9rem]">
-						Возникли вопросы?
-					</h2>
+					<h2 class="font-medium text-3xl sm:text-[40px] sm:leading-[2.9rem]">Возникли вопросы?</h2>
 				</div>
 				<div>
 					<p class="text-lg font-normal pt-5">
@@ -180,7 +200,7 @@
 	<div class="sm:mx-32 w-full mx-4 pt-16">
 		<div class="flex justify-between items-center sm:items-start">
 			<div>
-				<img  class="w-48 sm:w-52" src={Logo1} alt="" />
+				<img class="w-48 sm:w-52" src={Logo1} alt="" />
 			</div>
 			<div class="text-white">
 				<p class="text-[#F3F6FB] sm:text-lg">Контакты</p>

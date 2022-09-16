@@ -4,34 +4,25 @@
 	import arrow from '$lib/image/arrow.svg';
 	import axios from 'axios';
 	import { polusex } from '../store';
-    import { imask } from '@imask/svelte';
+	import { imask } from 'svelte-imask';
 	
     function decrement() {
 		polusex.update((c) => (c = true));
 	}
 	
-    let options = 'Телефон';
-
-	const option = {
-		mask: '{+7} (000) 000-00-00',
+    let option = 'Телефон';
+	const options = {
+		mask: '+{7}(000)000-00-00',
 		lazy: false
-	};
+  };
 
-	// @ts-ignore
-	function accept({ detail: maskRef }) {
-		console.log('accept', maskRef.value);
-		number = maskRef.value;
-	}
+  function accept({ detail: imask }) {
+    console.log('accepted', imask);
+  }
 
-	// @ts-ignore
-	function complete({ detail: maskRef }) {
-		console.log('complete', maskRef.unmaskedValue);
-	}
-
-
-
-
-
+  function complete({ detail: imask }) {
+    console.log('completed', imask);
+  }
 
 	const metr = [
 		{ id: 1, metr: '40' },
@@ -50,11 +41,11 @@
 	let metrow = '40';
 	let menu = ['Поддерживающая', 'Генеральная', 'После ремонта', 'Мытье окон'];
 	let flavours = ['Поддерживающая'];
-	let number = '+7';
+	let number = '';
 	const token = '5312487588:AAHrH9cNC5-amKNacngShd3ljnOwaJOmsHs';
 	const chatId = 596613157;
 	function submit() {
-		const fullMessage = `Расчет стоимости%0AНомер телефона: ${number}%0AКвадратных метров: ${metrow}%0AУслуга: ${flavours}%0AСпособ связи: ${options}`;
+		const fullMessage = `Расчет стоимости%0AНомер телефона: ${number}%0AКвадратных метров: ${metrow}%0AУслуга: ${flavours}%0AСпособ связи: ${option}`;
 		axios
 			.post(
 				`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${fullMessage}`
@@ -128,25 +119,24 @@
 						<p class="pb-3 text-sm">Ваш номер телефона</p>
 						<div class="flex">
 							<input
-					use:imask={option}
+					use:imask={options}
 					on:accept={accept}
 					on:complete={complete}
 								bind:value={number}
 								placeholder="Номер телефона"
 								class="p-3 w-56 rounded"
 								type="tel"
-								maxlength="12"
 							/>
 							<div
-								class:activeOption={options === 'Телефон'}
-								on:click={() => (options = 'Телефон')}
+								class:activeOption={option === 'Телефон'}
+								on:click={() => (option = 'Телефон')}
 								class="p-3 px-4 ml-4 border-2 border-[#5c677d] rounded flex items-center justify-center"
 							>
 								<Icon  icon="carbon:phone-voice-filled" />
 							</div>
 							<div
-								class:activeOption={options === 'Телеграм'}
-								on:click={() => (options = 'Телеграм')}
+								class:activeOption={option === 'Телеграм'}
+								on:click={() => (option = 'Телеграм')}
 								class="p-3 px-4 ml-4 border-2 border-[#5c677d] rounded flex items-center justify-center"
 							>
 								<Icon icon="file-icons:telegram" />
