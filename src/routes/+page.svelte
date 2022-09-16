@@ -2,13 +2,11 @@
 	import Logo1 from '$lib/image/Logo3.svg';
 	import { superx } from '../store';
 	import { polusex } from '../store';
-
 	import arrow from '$lib/image/arrow.svg';
-
 	import main1 from '$lib/image/main1.jpg';
-	import main2 from '$lib/image/main2.jpg';
 	import Windows2 from '../components/Windows2.svelte';
 	import Windows1 from '../components/Windows1.svelte';
+	import Main2 from '../components/Main2.svelte';
 
 	function decrement() {
 		superx.update((c) => (c = true));
@@ -50,7 +48,6 @@
 <Windows2 />
 <Windows1 />
 
-
 <div
 	data-scroll-section
 	class="sm:mx-32 mx-4 sm:pt-14 sm:flex items-center sm:pb-32 justify-between"
@@ -73,7 +70,9 @@
 	<div data-scroll-section class="sm:h-screen sm:mt-0 mt-20  bg-[#F3F6FB]">
 		<div class="sm:flex sm:mx-32 mx-4 pt-16 pb-8   sm:py-24   justify-between">
 			<div>
-				<h2 class="font-medium text-3xl sm:text-[40px] sm:leading-[2.9rem]">У нас понятные<br />и прозрачные цены<br />на клининг</h2>
+				<h2 class="font-medium text-3xl sm:text-[40px] sm:leading-[2.9rem]">
+					У нас понятные<br />и прозрачные цены<br />на клининг
+				</h2>
 			</div>
 			<div>
 				<p class="text-lg mt-4 sm:mt-0">
@@ -96,41 +95,9 @@
 			{/each}
 		</div>
 	</div>
-	<div
-		data-scroll-section
-		class="sm:h-screen bg-[#F3F6FB]  "
-	>
-		<div class="flex-col-reverse sm:gap-32 sm:items-center flex pt-24 pb-8 sm:py-0 sm:flex-row sm:mx-0 mx-4 ">
-			<div>
-				<img class="sm:h-screen sm:w-[49.5vw] " src={main2} alt="" />
-			</div>
-			<div>
-				<h2 class="font-medium text-3xl sm:text-[40px] sm:leading-[2.9rem]">
-					Мы контролируем<br />
-					качество
-				</h2>
-				<p class="text-lg font-normal pt-5">
-					Мы всегда спрашиваем отзыв о уборка, просим <br />
-					оценить работу клинера от 1 до 5. Если что не <br />
-					так – приедем и все исправим. Мы не хотим <br />
-					зарабатывать на недовольных клиентах.
-				</p>
-				<div class="flex pb-14 sm:pb-0 pt-7 gap-3 items-center">
-					<p class="text hidden sm:flex font-semibold uppercase text-[#59AAA4]">Оформить заявку</p>
-					<button
-						on:click={decrement2}
-						class="w-14 h-14 hidden  hover:scale-125 duration-300 sm:flex items-center justify-center rounded-full bg-[#59AAA4]"
-					>
-						<img width="24" class="" src={arrow} alt="" />
-					</button>
-					<button class="bg-[#59AAA4] sm:hidden font-medium w-full text-white p-3 rounded-lg text-lg">Оставить отзыв</button>
-
-				</div>
-			</div>
-		</div>
-	</div>
+	<Main2/>
 	<div data-scroll-section class="sm:h-screen bg-[#F3F6FB] sm:flex sm:gap-32 ">
-		<div class="sm:mx-32 mx-4 sm:w-full pt-24 pb-8 sm:py-0  sm:items-center sm:flex">
+		<div class="sm:mx-32 mx-4 sm:w-full pt-16 pb-8 sm:py-0  sm:items-center sm:flex">
 			<div class="sm:w-1/2">
 				<h2 class="font-medium text-3xl sm:text-[40px] sm:leading-[2.9rem]">
 					Лучшие клиенты — <br />
@@ -145,11 +112,14 @@
 					<p class="text hidden sm:flex  font-semibold uppercase text-[#59AAA4]">Оставить отзыв</p>
 					<button
 						on:click={decrement}
-						class="w-14 h-14 hidden hover:scale-125 duration-300 sm:flex items-center justify-center rounded-full bg-[#59AAA4]"
+						class="p-4 px-4 hidden hover:scale-125 duration-300 sm:flex items-center justify-center rounded-full bg-[#59AAA4]"
 					>
 						<img width="24" class="" src={arrow} alt="" />
 					</button>
-					<button class="bg-[#59AAA4] sm:hidden font-medium w-full text-white p-3 rounded-lg text-lg">Оставить отзыв</button>
+					<button
+						class="bg-[#59AAA4] sm:hidden font-medium w-full text-white p-3 rounded-lg text-lg"
+						>Оставить отзыв</button
+					>
 				</div>
 			</div>
 			<div class="sm:w-1/2">
@@ -221,3 +191,6 @@
 		</div>
 	</div>
 </div>
+
+<style>
+</style>

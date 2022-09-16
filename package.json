@@ -12,6 +12,7 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
+		"@iconify/svelte": "^3.0.0",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
 		"autoprefixer": "^10.4.10",
@@ -31,6 +32,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-locomotive-scroll": "^0.0.5"
+		"axios": "^0.27.2",
+		"svelte-locomotive-scroll": "^0.0.5",
+		"tw-elements": "^1.0.0-alpha12"
 	}
 }
