@@ -21,7 +21,7 @@
 		{ id: 1, metr: '40' },
 		{ id: 1, metr: '50' },
 		{ id: 1, metr: '60' },
-		{ id: 1, metr: '70+'},
+		{ id: 1, metr: '70+' }
 	];
 
 	let metrow = '40';
@@ -56,8 +56,7 @@
 		</div>
 		<div>
 			<h2 class="font-medium text-3xl sm:text-[40px] sm:leading-[2.9rem]">
-				Мы работаем<br />
-				вы отдыхаете
+				Мы работаем<br />вы отдыхаете
 			</h2>
 			<div class="flex mt-5 flex-col">
 				<form on:submit|preventDefault={submit} class="">
