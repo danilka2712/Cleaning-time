@@ -3,12 +3,35 @@
 	import Icon from '@iconify/svelte';
 	import arrow from '$lib/image/arrow.svg';
 	import axios from 'axios';
-	import { superx } from '../store';
-
-	function decrement() {
-		superx.update((c) => (c = true));
+	import { polusex } from '../store';
+    import { imask } from '@imask/svelte';
+	
+    function decrement() {
+		polusex.update((c) => (c = true));
 	}
-	let options = 'Телефон';
+	
+    let options = 'Телефон';
+
+	const option = {
+		mask: '{+7} (000) 000-00-00',
+		lazy: false
+	};
+
+	// @ts-ignore
+	function accept({ detail: maskRef }) {
+		console.log('accept', maskRef.value);
+		number = maskRef.value;
+	}
+
+	// @ts-ignore
+	function complete({ detail: maskRef }) {
+		console.log('complete', maskRef.unmaskedValue);
+	}
+
+
+
+
+
 
 	const metr = [
 		{ id: 1, metr: '40' },
@@ -25,8 +48,8 @@
 	];
 
 	let metrow = '40';
-	let menu = ['Комплексная', 'Генеральная', 'Несколько комнат', 'Быстрая уборка'];
-	let flavours = ['Комплексная'];
+	let menu = ['Поддерживающая', 'Генеральная', 'После ремонта', 'Мытье окон'];
+	let flavours = ['Поддерживающая'];
 	let number = '+7';
 	const token = '5312487588:AAHrH9cNC5-amKNacngShd3ljnOwaJOmsHs';
 	const chatId = 596613157;
@@ -61,7 +84,7 @@
 			<div class="flex mt-5 flex-col">
 				<form on:submit|preventDefault={submit} class="">
 					<p class=" text-sm">Общая площадь</p>
-					<div class="mt-3 sm:flex hidden gap-5 flex">
+					<div class="mt-3 sm:flex hidden gap-5">
 						{#each metr as m}
 							<div
 								on:click={() => (metrow = m.metr)}
@@ -105,6 +128,9 @@
 						<p class="pb-3 text-sm">Ваш номер телефона</p>
 						<div class="flex">
 							<input
+					use:imask={option}
+					on:accept={accept}
+					on:complete={complete}
 								bind:value={number}
 								placeholder="Номер телефона"
 								class="p-3 w-56 rounded"
@@ -116,7 +142,7 @@
 								on:click={() => (options = 'Телефон')}
 								class="p-3 px-4 ml-4 border-2 border-[#5c677d] rounded flex items-center justify-center"
 							>
-								<Icon icon="carbon:phone-voice-filled" />
+								<Icon  icon="carbon:phone-voice-filled" />
 							</div>
 							<div
 								class:activeOption={options === 'Телеграм'}

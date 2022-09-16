@@ -38,10 +38,10 @@
 		}
 	];
 	const items = [
-		{ id: 1, name: 'Поддерживающая', text: 'Стандартная уборка всей квартиры', price: 1990 },
-		{ id: 1, name: 'Поддерживающая', text: 'Стандартная уборка всей квартиры', price: 1990 },
-		{ id: 1, name: 'Поддерживающая', text: 'Стандартная уборка всей квартиры', price: 1990 },
-		{ id: 1, name: 'Поддерживающая', text: 'Стандартная уборка всей квартиры', price: 1990 }
+		{ id: 1, name: 'Поддерживающая', text: 'Вернем жилищу уют и сияющую чистоту. ', price: '1800₽ ' },
+		{ id: 2, name: 'Генеральная', text: 'Чистота может быть идеальной', price: '170-200₽  м<sup>2</sup>' },
+		{ id: 3, name: 'После ремонта', text: 'Уберем всю пыль и грязь после ремонта', price: '350-400₽  м<sup>2</sup>' },
+		{ id: 4, name: 'Мытье окон', text: 'Смотрите на мир через чистые окна!', price: '250₽  м<sup>2</sup>' }
 	];
 </script>
 
@@ -89,7 +89,7 @@
 						<p class="text-lg sm:text-base">{i.text}</p>
 					</div>
 					<div class="flex sm:mt-14 mt-8 items-end">
-						<h1 class="text-xl font-medium sm:text-lg">от {i.price} руб</h1>
+						<h1 class="text-xl font-medium sm:text-lg">от {@html i.price}</h1>
 					</div>
 				</div>
 			{/each}
@@ -140,8 +140,7 @@
 			<div class=" sm:flex sm:justify-between sm:items-end">
 				<div>
 					<h2 class="font-medium text-3xl sm:text-[40px] sm:leading-[2.9rem]">
-						Мы работаем<br />
-						вы отдыхаете
+						Возникли вопросы?
 					</h2>
 				</div>
 				<div>
