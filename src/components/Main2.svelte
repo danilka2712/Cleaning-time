@@ -154,6 +154,7 @@
 							<img width="24" class="" src={arrow} alt="" />
 						</button>
 						<button
+						on:click={decrement}
 							class="bg-[#59AAA4] sm:hidden font-medium w-full text-white p-3 rounded-lg text-lg"
 							>Рассчитать стоимость</button
 						>
