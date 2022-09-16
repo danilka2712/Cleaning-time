@@ -179,14 +179,14 @@
 
 <div class="bg-[#59AAA4] sm:h-[35vh] flex" data-scroll-section>
 	<div class="sm:mx-32 w-full mx-4 pt-16">
-		<div class="flex justify-between items-start">
+		<div class="flex justify-between items-center sm:items-start">
 			<div>
-				<img width="250" src={Logo1} alt="" />
+				<img  class="w-48 sm:w-52" src={Logo1} alt="" />
 			</div>
 			<div class="text-white">
-				<p class="text-[#F3F6FB] text-lg">Контакты</p>
-				<p class="text-[#F3F6FB] text-lg">+7(913)148-90-35</p>
-				<p class="text-[#F3F6FB] text-lg">20-90-35</p>
+				<p class="text-[#F3F6FB] sm:text-lg">Контакты</p>
+				<p class="text-[#F3F6FB] sm:text-lg">+7(913)148-90-35</p>
+				<p class="text-[#F3F6FB] sm:text-lg">20-90-35</p>
 			</div>
 		</div>
 	</div>

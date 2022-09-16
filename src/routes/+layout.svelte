@@ -37,11 +37,11 @@
 	</div>
 	<div class="flex items-center gap-7">
 		<a class=" hidden sm:flex font-semibold" href="tel:+20-48-72">20-90-35</a>
-		<a class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10" href="">
+		<a class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10" href="tel:+20-48-72">
 		<img class="w-5 box" src={Phone} alt="" />
 
 		</a>
-		<a class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10" href="">
+		<a class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10" href="https://vk.com/">
 			<img class="w-7" src={Vk} alt="" />
 	
 			</a>
