@@ -14,10 +14,10 @@ DG.then(function () {
 
 <div data-scroll-section class=" sm:w-full pt-5 sm:mt-0 bg-white sm:h-screen">
 	<div class="sm:py-16 sm:px-32 px-4  flex-col sm:flex sm:w-full">
-		<div class="sm:flex justify-between items-center">
+		<div class="sm:flex justify-between pt-14 items-center">
             <div>
                 <h2 class="font-medium text-3xl sm:text-[40px] sm:leading-[2.9rem]">Контакты</h2>
-                <div class="pt-14">
+                <div class="pt-4 sm:pt-14">
                     <p class="pb-2">Офис</p>
                     <h1 class=" font-medium">Омск, Жукова 32А</h1>
                 </div>
