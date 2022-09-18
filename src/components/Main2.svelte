@@ -61,18 +61,18 @@
 	}
 </script>
 
-<div data-scroll-section class="sm:h-screen bg-[#F3F6FB]  ">
+<div data-scroll-section class="lg:h-screen bg-[#F3F6FB]  sm:mt-32 lg:mt-0">
 	<div
-		class="flex-col-reverse sm:gap-32 sm:items-center flex pt-24 pb-8 sm:py-0 sm:flex-row sm:mx-0 mx-4 "
+		class="flex-col-reverse lg:gap-32 sm:items-center flex pt-24 pb-8 sm:py-0 sm:flex-row sm:mx-0 mx-4 "
 	>
 		<div>
-			<img class="sm:h-screen sm:w-[49.5vw] " src={main2} alt="" />
+			<img class="lg:h-screen sm:w-[49.5vw] " src={main2} alt="" />
 		</div>
-		<div>
+		<div class="sm:mx-12 lg:mx-0">
 			<h2 class="font-medium text-3xl sm:text-[40px] sm:leading-[2.9rem]">
 				Мы работаем<br />вы отдыхаете
 			</h2>
-			<div class="flex mt-5 flex-col">
+			<div class="flex mt-5  flex-col">
 				<form on:submit|preventDefault={submit} class="">
 					<p class=" text-sm">Общая площадь</p>
 					<div class="mt-3 sm:flex hidden gap-5">

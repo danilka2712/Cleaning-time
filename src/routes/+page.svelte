@@ -72,14 +72,14 @@
 	data-scroll-section
 	class="bg-white"
 >
-	<div class="sm:mx-32 mx-4  sm:pt-14 sm:flex items-center sm:pb-32 justify-between">
+	<div class="lg:mx-32 sm:mx-14 mx-4 gap-10  sm:pt-14 sm:flex items-center sm:pb-32 justify-between">
 		<div class="">
-			<h1 class="sm:text-5xl pt-20 sm:pt-0 sm:mt-0 text-3xl font-medium">
+			<h1 class="lg:text-5xl pt-20 sm:pt-0 sm:mt-0 text-3xl font-medium">
 				Профессиональные <br />клининговые <br /> услуги в Омске
 			</h1>
-			<p class="sm:mt-12 mt-4 sm:text-lg">
+			<p class="sm:mt-12 mt-4 lg:text-lg">
 				Стабильно высокое качество уборок <br /> для частных лиц и бизнеса на лучших условиях
-				<br /><span class="sm:flex hidden">в СНГ с гарантией по договору</span>
+				<br class="sm:hidden lg:flex" /><span class="lg:flex hidden">в СНГ с гарантией по договору</span>
 			</p>
 		</div>
 		<div>
@@ -89,21 +89,21 @@
 </div>
 
 <main class="">
-	<div data-scroll-section class="sm:h-screen sm:mt-0 mt-20  bg-[#F3F6FB]">
-		<div class="sm:flex sm:mx-32 mx-4 pt-16 pb-8   sm:py-24   justify-between">
+	<div data-scroll-section class="lg:h-screen sm:mt-0 mt-20  bg-[#F3F6FB]">
+		<div class="sm:flex lg:mx-32 sm:mx-14 mx-4 pt-16 pb-8   sm:py-24   justify-between">
 			<div>
-				<h2 class="font-medium text-3xl sm:text-[40px] sm:leading-[2.9rem]">
+				<h2 class="font-medium  sm:text-2xl text-3xl lg:text-[40px] lg:leading-[2.9rem]">
 					У нас понятные<br />и прозрачные цены<br />на клининг
 				</h2>
 			</div>
 			<div>
-				<p class="text-lg mt-4 sm:mt-0">
+				<p class="lg:text-lg mt-4 sm:mt-0">
 					Мы за честные цены. Клиенты нашей<br />компании также могут сэкономить<br />оформив
 					подписку на уборку.
 				</p>
 			</div>
 		</div>
-		<div class="flex flex-col sm:flex-row sm:mx-32 mx-4 gap-5 sm:gap-8 justify-between ">
+		<div class=" grid lg:grid-cols-4 sm:grid-cols-2 lg:mx-32 sm:mx-14 mx-4 gap-5 sm:gap-8 justify-between ">
 			{#each items as i}
 				<div class="bg-white rounded-lg w-full p-7">
 					<div>
@@ -118,8 +118,8 @@
 		</div>
 	</div>
 	<Main2 />
-	<div data-scroll-section class="sm:h-screen bg-[#F3F6FB] sm:flex sm:gap-32 ">
-		<div class="sm:mx-32 mx-4 sm:w-full pt-16 pb-8 sm:py-0  sm:items-center sm:flex">
+	<div data-scroll-section class="lg:h-screen bg-[#F3F6FB] lg:flex sm:gap-32 ">
+		<div class="lg:mx-32 sm:mx-14 mx-4 lg:w-full pt-16 pb-8 sm:py-0  sm:items-center lg:flex">
 			<div class="sm:w-1/2">
 				<h2 class="font-medium text-3xl sm:text-[40px] sm:leading-[2.9rem]">
 					Лучшие клиенты — <br />

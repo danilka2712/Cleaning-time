@@ -24,12 +24,12 @@
 	imageTarget={'.grid-item-media'}
 >
 <header data-scroll-section  class:active2={$page.url.pathname === '/stocks'} class="bg-white">
-	<div class="sm:mx-32  mx-4 pt-5 flex justify-between sm:items-center">
+	<div class="lg:mx-32 sm:mx-14  mx-4 pt-5 flex justify-between sm:items-center">
 		<div>
 			<img class="w-48 sm:w-52" src={Logo} alt="" />
 		</div>
 		<div>
-			<ul class="sm:flex hidden gap-8 font-medium">
+			<ul class="lg:flex hidden gap-8 font-medium">
 				<a class:active={$page.url.pathname === '/'} href="/">Главная</a>
 				<a class:active={$page.url.pathname === '/stocks'} href="/stocks">Акции</a>
 				<a class:active={$page.url.pathname === '/contacts'} href="/contacts">Контакты</a>
