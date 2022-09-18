@@ -74,7 +74,7 @@
 >
 	<div class="sm:mx-32 mx-4  sm:pt-14 sm:flex items-center sm:pb-32 justify-between">
 		<div class="">
-			<h1 class="sm:text-5xl pt-20 sm:mt-0 text-3xl font-medium">
+			<h1 class="sm:text-5xl pt-20 sm:pt-0 sm:mt-0 text-3xl font-medium">
 				Профессиональные <br />клининговые <br /> услуги в Омске
 			</h1>
 			<p class="sm:mt-12 mt-4 sm:text-lg">

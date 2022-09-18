@@ -34,6 +34,7 @@
 	"type": "module",
 	"dependencies": {
 		"@imask/svelte": "^6.4.3-alpha.0",
+		"2gis-maps": "^3.7.1",
 		"axios": "^0.27.2",
 		"svelte-google-maps": "^0.2.0",
 		"svelte-imask": "^1.2.0",

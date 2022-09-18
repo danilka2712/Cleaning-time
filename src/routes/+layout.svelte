@@ -23,7 +23,7 @@
 	onLocationChange={(scroll) => scroll.scrollTo(0, { duration: 2, disableLerp: false })}
 	imageTarget={'.grid-item-media'}
 >
-<header data-scroll-section class:active2={$page.url.pathname === '/stocks'} class="bg-white">
+<header data-scroll-section  class:active2={$page.url.pathname === '/stocks'} class="bg-white">
 	<div class="sm:mx-32  mx-4 pt-5 flex justify-between sm:items-center">
 		<div>
 			<img class="w-48 sm:w-52" src={Logo} alt="" />
