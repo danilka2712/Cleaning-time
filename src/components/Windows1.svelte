@@ -9,7 +9,7 @@ function decrement2() {
 </script>
 
 {#if $polusex}
-<div class="w-screen absolute right-0 top-0 z-20 bg-[#33415C]/30 shadow-xl h-screen">
+<div class="w-screen fixed right-0 top-0 z-20 bg-[#33415C]/30 shadow-xl h-screen">
 	<div class="w-full h-full flex justify-center items-center">
 		<div class="bg-white relative rounded-lg w-72 p-10">
             
