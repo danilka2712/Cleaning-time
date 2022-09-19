@@ -5,24 +5,20 @@
 	import axios from 'axios';
 	import { polusex } from '../store';
 	import { imask } from 'svelte-imask';
-	
-    function decrement() {
-		polusex.update((c) => (c = true));
-	}
-	
-    let option = 'Телефон';
+
+	let option = 'Телефон';
 	const options = {
 		mask: '+{7}(000)000-00-00',
-		lazy: false
-  };
+		lazy: true
+	};
 
-  function accept({ detail: imask }) {
-    console.log('accepted', imask);
-  }
+	function accept({ detail: imask }) {
+		console.log('accepted', imask);
+	}
 
-  function complete({ detail: imask }) {
-    console.log('completed', imask);
-  }
+	function complete({ detail: imask }) {
+		console.log('completed', imask);
+	}
 
 	const metr = [
 		{ id: 1, metr: '40' },
@@ -51,6 +47,7 @@
 				`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${fullMessage}`
 			)
 			.then(
+				
 				(response) => {
 					console.log('SUBMIT', response);
 				},
@@ -58,6 +55,7 @@
 					console.log(error);
 				}
 			);
+			polusex.update((c) => (c = true));
 	}
 </script>
 
@@ -119,9 +117,10 @@
 						<p class="pb-3 text-sm">Ваш номер телефона</p>
 						<div class="flex">
 							<input
-					use:imask={options}
-					on:accept={accept}
-					on:complete={complete}
+								required
+								use:imask={options}
+								on:accept={accept}
+								on:complete={complete}
 								bind:value={number}
 								placeholder="Номер телефона"
 								class="p-3 w-56 rounded"
@@ -132,7 +131,7 @@
 								on:click={() => (option = 'Телефон')}
 								class="p-3 px-4 ml-4 border-2 border-[#5c677d] rounded flex items-center justify-center"
 							>
-								<Icon  icon="carbon:phone-voice-filled" />
+								<Icon icon="carbon:phone-voice-filled" />
 							</div>
 							<div
 								class:activeOption={option === 'Телеграм'}
@@ -148,13 +147,13 @@
 							Рассчитать стоимость
 						</p>
 						<button
-							on:click={decrement}
+						
 							class="p-4 px-4 hidden  hover:scale-125 duration-300 sm:flex items-center justify-center rounded-full bg-[#59AAA4]"
 						>
 							<img width="24" class="" src={arrow} alt="" />
 						</button>
 						<button
-						on:click={decrement}
+							
 							class="bg-[#59AAA4] sm:hidden font-medium w-full text-white p-3 rounded-lg text-lg"
 							>Рассчитать стоимость</button
 						>
