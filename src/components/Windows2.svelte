@@ -26,7 +26,7 @@ const token = '5312487588:AAHrH9cNC5-amKNacngShd3ljnOwaJOmsHs';
 					console.log(error);
 				}
 			);
-			superx.update(c => c = true);
+			superx.update(c => c = false);
 	}
 </script>
 
@@ -37,7 +37,7 @@ const token = '5312487588:AAHrH9cNC5-amKNacngShd3ljnOwaJOmsHs';
             <button on:click={closeWindow} class=" absolute top-5 right-10">
                 <img width="24" class="" src={Close} alt="">
             </button>
-			<form on:submit={submit} action="" class="flex flex-col gap-7">
+			<form on:submit|preventDefault={submit} action="" class="flex flex-col gap-7">
 				<h1 class=" font-medium text-xl text-center">Оставить отзыв</h1>
 				<input bind:value={name} placeholder="Ваше имя" class="border-[#5C677D]/50 border rounded-lg p-3" type="text" />
 				<input bind:value={email} placeholder="Почта" class="border-[#5C677D]/50 border rounded-lg p-3" type="text" />
