@@ -32,7 +32,7 @@ DG.then(function () {
             </div>
             <div id="map" class="w-full sm:w-1/2 sm:h-[500px] h-96 mt-20 sm:mt-0"></div>
         </div>
-		<div class="mt-32 flex justify-between">
+		<div class="pt-32 flex justify-between">
 			
 		</div>
 	</div>

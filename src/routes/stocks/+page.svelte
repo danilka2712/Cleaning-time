@@ -45,7 +45,7 @@
 
 </script>
 
-<div  data-scroll-section class="box sm:w-full mt-20 sm:mt-0 mx-4 sm:mx-4 sm:h-screen">
+<div  data-scroll-section class="box sm:w-full pt-20 sm:mt-0 px-4 sm:px-0 sm:h-screen">
 	<div class="sm:py-16 sm:px-32 sm:flex sm:w-full sm:items-center">
 		<div class="sm:w-1/2">
 			<div>

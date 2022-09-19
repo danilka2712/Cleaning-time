@@ -94,7 +94,7 @@
 </div>
 
 <main class="">
-	<div data-scroll-section class="lg:h-screen sm:mt-0 mt-20  bg-[#F3F6FB]">
+	<div data-scroll-section class="lg:h-screen sm:mt-0 mt-20 bg-[#F3F6FB]">
 		<div class="sm:flex lg:mx-32 sm:mx-14 mx-4 pt-16 pb-8   sm:py-24   justify-between">
 			<div>
 				<h2 class="font-medium  sm:text-2xl text-3xl lg:text-[40px] lg:leading-[2.9rem]">

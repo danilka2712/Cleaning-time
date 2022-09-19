@@ -59,12 +59,12 @@
 	}
 </script>
 
-<div data-scroll-section class="lg:h-screen bg-[#F3F6FB]  sm:mt-32 lg:mt-0">
+<div data-scroll-section class="lg:h-screen bg-[#F3F6FB]  lg:mt-0">
 	<div
 		class="flex-col-reverse lg:gap-32 sm:items-center flex pt-24 pb-8 sm:py-0 sm:flex-row sm:mx-0 mx-4 "
 	>
 		<div>
-			<img class="lg:h-screen sm:w-[49.5vw] " src={main2} alt="" />
+			<img class="lg:h-screen  lg:w-[49.5vw] " src={main2} alt="" />
 		</div>
 		<div class="sm:mx-12 lg:mx-0">
 			<h2 class="font-medium text-3xl sm:text-[40px] sm:leading-[2.9rem]">
@@ -73,7 +73,7 @@
 			<div class="flex mt-5  flex-col">
 				<form on:submit|preventDefault={submit} class="">
 					<p class=" text-sm">Общая площадь</p>
-					<div class="mt-3 sm:flex hidden gap-5">
+					<div class="mt-3 lg:flex hidden gap-5">
 						{#each metr as m}
 							<div
 								on:click={() => (metrow = m.metr)}
@@ -84,7 +84,7 @@
 							</div>
 						{/each}
 					</div>
-					<div class="mt-3 sm:hidden gap-5 flex">
+					<div class="mt-3 lg:hidden flex justify-between">
 						{#each metrMob as m}
 							<div
 								on:click={() => (metrow = m.metr)}
@@ -115,7 +115,7 @@
 					</div>
 					<div class="mt-7">
 						<p class="pb-3 text-sm">Ваш номер телефона</p>
-						<div class="flex">
+						<div class="flex lg:gap-4 justify-between lg:justify-start">
 							<input
 								required
 								use:imask={options}
@@ -129,14 +129,14 @@
 							<div
 								class:activeOption={option === 'Телефон'}
 								on:click={() => (option = 'Телефон')}
-								class="p-3 px-4 ml-4 border-2 border-[#5c677d] rounded flex items-center justify-center"
+								class="p-3 px-4  border-2 border-[#5c677d] rounded flex items-center justify-center"
 							>
 								<Icon icon="carbon:phone-voice-filled" />
 							</div>
 							<div
 								class:activeOption={option === 'Телеграм'}
 								on:click={() => (option = 'Телеграм')}
-								class="p-3 px-4 ml-4 border-2 border-[#5c677d] rounded flex items-center justify-center"
+								class="p-3 px-4  border-2 border-[#5c677d] rounded flex items-center justify-center"
 							>
 								<Icon icon="file-icons:telegram" />
 							</div>
@@ -154,7 +154,7 @@
 						</button>
 						<button
 							
-							class="bg-[#59AAA4] sm:hidden font-medium w-full text-white p-3 rounded-lg text-lg"
+							class="bg-[#59AAA4] sm:hidden my-4 font-medium w-full text-white p-3 rounded-lg text-lg"
 							>Рассчитать стоимость</button
 						>
 					</div>
