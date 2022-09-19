@@ -1,6 +1,8 @@
 <script lang="ts">
-	import Logo1 from '$lib/image/Logo3.svg';
+	import Logo1 from '$lib/image/Logo5.svg';
 	import { superx } from '../store';
+	import Phone from '$lib/image/Phone.svg';
+	import Vk from '$lib/image/Vk.svg';
 	import { polusex } from '../store';
 	import arrow from '$lib/image/arrow.svg';
 	import main1 from '$lib/image/main1.jpg';
@@ -196,20 +198,29 @@
 	</div>
 </main>
 
-<div class="bg-[#59AAA4] sm:h-[35vh] flex" data-scroll-section>
-	<div class="sm:mx-32 w-full mx-4 pt-16">
-		<div class="flex justify-between items-center sm:items-start">
+<div class="bg-[#59AAA4]  flex" data-scroll-section>
+	<div class="sm:mx-32 w-full mx-4 py-16">
+		<div class="flex justify-between items-center">
 			<div>
 				<img class="w-48 sm:w-52" src={Logo1} alt="" />
 			</div>
-			<div class="text-white">
-				<p class="text-[#F3F6FB] sm:text-lg">Контакты</p>
-				<p class="text-[#F3F6FB] sm:text-lg">+7(913)148-90-35</p>
-				<p class="text-[#F3F6FB] sm:text-lg">20-90-35</p>
+			<div class="flex items-center gap-7 sm:pt-3">
+				<a class=" hidden text-white sm:flex font-semibold" href="tel:+79131489035">+7 (913) 148-90-35</a>
+				<a class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10" href="tel:+79131489035">
+				<img class="w-5 filter-white" src={Phone} alt="" />
+		
+				</a>
+				<a class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10" href="https://vk.com/">
+					<img class="w-7 filter-white" src={Vk} alt="" />
+			
+					</a>
 			</div>
 		</div>
 	</div>
 </div>
 
 <style>
+	   .filter-white{
+        filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(86deg) brightness(228%) contrast(119%);
+    }
 </style>
