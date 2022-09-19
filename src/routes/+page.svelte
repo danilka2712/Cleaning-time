@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Logo1 from '$lib/image/Logo5.svg';
+
 	import { superx } from '../store';
 	import Phone from '$lib/image/Phone.svg';
 	import Vk from '$lib/image/Vk.svg';
@@ -65,12 +66,14 @@
 			price: '250₽  м<sup>2</sup>'
 		}
 	];
+
+	
 </script>
 
 <Windows2 />
 <Windows1 />
 
-<div
+<div 
 	data-scroll-section
 	class="bg-white"
 >
@@ -128,7 +131,7 @@
 					наши клиенты!
 				</h2>
 				<p class="text-lg font-normal pt-5">
-					Оставить пожалуйста ваш отзыв<br />
+					Оставьте пожалуйста ваш отзыв<br />
 					благодаря ему мы будем знать как <br />
 					улучшить наш сервис
 				</p>
