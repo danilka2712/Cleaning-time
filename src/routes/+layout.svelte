@@ -36,7 +36,7 @@
 			</ul>
 			
 		</div>
-		<div class="flex items-center lg:pt-2 gap-7">
+		<div class="flex items-center lg:pt-2 pt-1 gap-7">
 			<a class=" hidden sm:flex font-semibold" href="tel:+79131489035">+7 (913) 148-90-35</a>
 			<a class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10" href="tel:+79131489035">
 			<img class="w-5 box" src={Phone} alt="" />
