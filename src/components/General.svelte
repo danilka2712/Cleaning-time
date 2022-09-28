@@ -29,9 +29,9 @@
 						<li class="text-base pb-2">Мытье всех фасадов мебели;</li>
 						<li class="text-base pb-2">Обеспыливание радиаторов и батарей;</li>
 						<li class="text-base pb-2">Обеспыливание дверей, дверных проемов;</li>
-						<li class="text-base pb-2">Обеспыливание выключателей и розеток;</li>
+						<li class="text-base pb-2 hidden sm:flex">Обеспыливание выключателей и розеток;</li>
 						<li class="text-base pb-2">Обеспыливание всех предметов интерьера;</li>
-						<li class="text-base pb-2">Очищение межплиточных швов;</li>
+						<li class="text-base pb-2 hidden sm:flex">Очищение межплиточных швов;</li>
 						<li class="text-base pb-2">Мытье пола и плинтусов;</li>
 						<li class="text-base pb-2">Очищение санузла (ванная и туалетная комната).</li>
 					</ul>
