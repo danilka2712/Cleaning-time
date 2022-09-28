@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Logo1 from '$lib/image/Logo5.svg';
-
+	import Icon from '@iconify/svelte';
 	import { superx } from '../store';
 	import Phone from '$lib/image/Phone.svg';
 	import Vk from '$lib/image/Vk.svg';
@@ -9,15 +9,21 @@
 	import main1 from '$lib/image/main1.jpg';
 	import Windows2 from '../components/Windows2.svelte';
 	import Windows1 from '../components/Windows1.svelte';
+	import Supporting from '../components/Supporting.svelte';
+	import General from '../components/General.svelte';
+	import Afterrepair from '../components/Afterrepair.svelte';
+	import Washwin from '../components/Washwin.svelte';
+
 	import Main2 from '../components/Main2.svelte';
+	import { infoClean } from '../store';
 
 	function decrement() {
 		superx.update((c) => (c = true));
 	}
-	function decrement2() {
-		polusex.update((x) => (x = true));
-	}
 
+	function decrement3() {
+		infoClean.update((x) => (x = true));
+	}
 	const rewars = [
 		{
 			id: 1,
@@ -67,24 +73,34 @@
 		}
 	];
 
-	
+	let table = '1'
 </script>
 
 <Windows2 />
 <Windows1 />
+{#if table === 'Поддерживающая'}
+<Supporting />
+{:else if table === 'Генеральная'}
+<General />
+{:else if table === 'После ремонта'}
+<Afterrepair/>
+{:else if table === 'Мытье окон'}
+<Washwin/>
+{/if}
 
-<div 
-	data-scroll-section
-	class="bg-white"
->
-	<div class="lg:mx-32 sm:mx-14 mx-4 gap-10  sm:pt-14 sm:flex items-center sm:pb-32 justify-between">
+<div data-scroll-section class="bg-white">
+	<div
+		class="lg:mx-32 sm:mx-14 mx-4 gap-10  sm:pt-14 sm:flex items-center sm:pb-32 justify-between"
+	>
 		<div class="">
 			<h1 class="lg:text-5xl pt-20 sm:pt-0 sm:mt-0 text-3xl font-medium">
 				Профессиональные <br />клининговые <br /> услуги в Омске
 			</h1>
 			<p class="sm:mt-12 mt-4 lg:text-lg">
 				Стабильно высокое качество уборок <br /> для частных лиц и бизнеса на лучших условиях
-				<br class="sm:hidden lg:flex" /><span class="lg:flex hidden">в СНГ с гарантией по договору</span>
+				<br class="sm:hidden lg:flex" /><span class="lg:flex hidden"
+					>в СНГ с гарантией по договору</span
+				>
 			</p>
 		</div>
 		<div>
@@ -108,54 +124,62 @@
 				</p>
 			</div>
 		</div>
-		<div class=" grid lg:grid-cols-4 sm:grid-cols-2 lg:mx-32 sm:mx-14 mx-4 gap-5 sm:gap-8 justify-between ">
+		<div
+			class=" grid lg:grid-cols-4 sm:grid-cols-2 lg:mx-32 sm:mx-14 mx-4 gap-5 sm:gap-8 justify-between "
+		>
 			{#each items as i}
 				<div class="bg-white rounded-lg w-full p-7">
 					<div>
 						<h1 class=" text-xl sm:text-lg font-medium pb-4">{i.name}</h1>
 						<p class="text-lg sm:text-base">{i.text}</p>
 					</div>
-					<div class="flex sm:mt-14 mt-8 items-end">
+					<div class="flex sm:mt-14 mt-8 item-center  justify-between ">
 						<h1 class="text-xl font-medium sm:text-lg">от {@html i.price}</h1>
+						<button on:click={() => table = i.name} on:click={decrement3}>
+							<Icon width="22" color="#33415c" hight="22" icon="codicon:info" />
+						</button>
 					</div>
 				</div>
+
 			{/each}
 		</div>
 	</div>
+
 	<Main2 />
 	<div data-scroll-section class="lg:h-screen bg-[#F3F6FB] lg:flex sm:gap-32 ">
 		<div class="lg:mx-32 sm:mx-14 mx-4 lg:w-full pt-16 pb-8 sm:py-0  sm:items-center lg:flex">
-			<div class="sm:w-1/2">
-				<h2 class="font-medium text-3xl sm:text-[40px] sm:leading-[2.9rem]">
+			<div class="lg:w-1/2">
+				<h2 class="font-medium  sm:text-2xl text-3xl lg:text-[40px] lg:leading-[2.9rem]">
 					Лучшие клиенты — <br />
 					наши клиенты!
 				</h2>
-				<p class="text-lg font-normal pt-5">
+				<p class="lg:text-lg mt-4 sm:mt-4 mt-4">
 					Оставьте пожалуйста ваш отзыв<br />
 					благодаря ему мы будем знать как <br />
 					улучшить наш сервис
 				</p>
-				<div class="sm:flex  pb-14 sm:pb-0  pt-7 gap-3 items-center">
-					<p class="text hidden sm:flex  font-semibold uppercase text-[#59AAA4]">Оставить отзыв</p>
+				<div class="sm:flex  pb-14 sm:pb-0 sm:mb-10 lg:mb-0  pt-7 gap-3 items-center">
+					<p class="lg:text-base text-sm hidden sm:flex font-semibold uppercase text-[#59AAA4]">Оставить отзыв</p>
 					<button
 						on:click={decrement}
-						class="p-4 px-4 hidden hover:scale-125 duration-300 sm:flex items-center justify-center rounded-full bg-[#59AAA4]"
+						class="lg:p-4 lg:px-4 px-2 p-2 hidden  hover:scale-125 duration-300 sm:flex items-center justify-center rounded-full bg-[#59AAA4]"
 					>
 						<img width="24" class="" src={arrow} alt="" />
 					</button>
-					<button on:click={decrement}
+					<button
+						on:click={decrement}
 						class="bg-[#59AAA4] sm:hidden font-medium w-full text-white p-3 rounded-lg text-lg"
 						>Оставить отзыв</button
 					>
 				</div>
 			</div>
-			<div class="sm:w-1/2">
+			<div class="lg:w-1/2">
 				<div class="sm:grid sm:grid-cols-2 flex flex-col gap-7">
 					{#each rewars as r}
 						<div class=" bg-white p-7">
-							<h1 class=" text-xl font-semibold">{r.name}</h1>
-							<p class="text-base pt-4">{r.text}</p>
-							<p class="text-[#59AAA4] pt-4 font-medium">Все отзывы...</p>
+							<h1 class=" lg:text-xl text-base font-semibold">{r.name}</h1>
+							<p class="lg:text-base text-sm pt-4">{r.text}</p>
+							<p class="text-[#59AAA4] pt-4 text-sm lg:text-base lg:font-medium">Все отзывы...</p>
 						</div>
 					{/each}
 				</div>
@@ -163,23 +187,23 @@
 		</div>
 	</div>
 	<div data-scroll-section class="sm:h-[80vh] py-14 sm:py-0  bg-[#F3F6FB] ">
-		<div class="sm:mx-32  pb-8 sm:py-0  mx-4 sm:pt-36">
+		<div class="lg:mx-32  pb-8 sm:py-0  mx-4 sm:pt-36">
 			<div class=" sm:flex sm:justify-between sm:items-end">
 				<div>
-					<h2 class="font-medium text-3xl sm:text-[40px] sm:leading-[2.9rem]">Возникли вопросы?</h2>
+					<h2 class="font-medium  sm:text-2xl text-3xl lg:text-[40px] lg:leading-[2.9rem]">Возникли вопросы?</h2>
 				</div>
 				<div>
-					<p class="text-lg font-normal pt-5">
-						Позвоните по номеру 20-90-35 или оставьте свои контакты <br /> наши менеджеры свяжутся с
+					<p class="lg:text-lg mt-4 sm:mt-4 mt-4">
+						Позвоните по номеру 20-90-35 или оставьте свои контакты <br class="hidden lg:flex"/> наши менеджеры свяжутся с
 						вами в ближайшее время!
 					</p>
 				</div>
 			</div>
 			<div class="pt-12">
-				<form class="flex flex-col sm:flex-row rounded-lg  bg-white sm:p-14 p-8 gap-5" action="">
+				<form class="flex flex-col sm:flex-row rounded-lg  bg-white lg:p-14 p-8 gap-5" action="">
 					<input
 						placeholder="Ваше имя"
-						class="w-full rounded-lg  h-14 p-4 border-[#5C677D]/50 border"
+						class="w-full hidden lg:flex rounded-lg  h-14 p-4 border-[#5C677D]/50 border"
 						type="text"
 					/>
 					<input
@@ -188,7 +212,7 @@
 						type="text"
 					/>
 					<input
-						placeholder="Укажите нужную вам услугу"
+						placeholder="Укажите услугу"
 						class="w-full rounded-lg  h-14 p-4 border-[#5C677D]/50 border"
 						type="text"
 					/>
@@ -208,22 +232,29 @@
 				<img class="w-48 sm:w-52" src={Logo1} alt="" />
 			</div>
 			<div class="flex items-center gap-7 sm:pt-3">
-				<a class=" hidden text-white sm:flex font-semibold" href="tel:+79131489035">+7 (913) 148-90-35</a>
-				<a class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10" href="tel:+79131489035">
-				<img class="w-5 filter-white" src={Phone} alt="" />
-		
+				<a class=" hidden text-white sm:flex font-semibold" href="tel:+79131489035"
+					>+7 (913) 148-90-35</a
+				>
+				<a
+					class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10"
+					href="tel:+79131489035"
+				>
+					<img class="w-5 filter-white" src={Phone} alt="" />
 				</a>
-				<a class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10" href="https://vk.com/">
+				<a
+					class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10"
+					href="https://vk.com/"
+				>
 					<img class="w-7 filter-white" src={Vk} alt="" />
-			
-					</a>
+				</a>
 			</div>
 		</div>
 	</div>
 </div>
 
 <style>
-	   .filter-white{
-        filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(86deg) brightness(228%) contrast(119%);
-    }
+	.filter-white {
+		filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(86deg) brightness(228%)
+			contrast(119%);
+	}
 </style>

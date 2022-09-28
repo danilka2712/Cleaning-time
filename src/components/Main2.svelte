@@ -59,7 +59,7 @@
 	}
 </script>
 
-<div data-scroll-section class="lg:h-screen bg-[#F3F6FB]  lg:mt-0">
+<div data-scroll-section class="lg:h-screen bg-[#F3F6FB] lg:py-0 py-12  lg:mt-0">
 	<div
 		class="flex-col-reverse lg:gap-32 sm:items-center flex pt-24 pb-8 sm:py-0 sm:flex-row sm:mx-0 mx-4 "
 	>
@@ -67,7 +67,7 @@
 			<img class="lg:h-screen  lg:w-[49.5vw] " src={main2} alt="" />
 		</div>
 		<div class="sm:mx-12 lg:mx-0">
-			<h2 class="font-medium text-3xl sm:text-[40px] sm:leading-[2.9rem]">
+			<h2 class="font-medium  sm:text-2xl text-3xl lg:text-[40px] lg:leading-[2.9rem]">
 				Мы работаем<br />вы отдыхаете
 			</h2>
 			<div class="flex mt-5  flex-col">
@@ -144,12 +144,12 @@
 						</div>
 					</div>
 					<div class="flex pb-14 sm:pb-0 pt-7 gap-3 items-center">
-						<p class="text hidden sm:flex font-semibold uppercase text-[#59AAA4]">
+						<p class="lg:text-base text-sm hidden sm:flex font-semibold uppercase text-[#59AAA4]">
 							Рассчитать стоимость
 						</p>
 						<button
 						
-							class="p-4 px-4 hidden  hover:scale-125 duration-300 sm:flex items-center justify-center rounded-full bg-[#59AAA4]"
+							class="lg:p-4 lg:px-4 px-2 p-2 hidden  hover:scale-125 duration-300 sm:flex items-center justify-center rounded-full bg-[#59AAA4]"
 						>
 							<img width="24" class="" src={arrow} alt="" />
 						</button>

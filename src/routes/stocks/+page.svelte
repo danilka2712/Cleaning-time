@@ -45,7 +45,7 @@
 
 </script>
 
-<div  data-scroll-section class="box sm:w-full pt-20 sm:mt-0 px-4 sm:px-0 sm:h-screen">
+<div  data-scroll-section class="box sm:w-full sm:mt-0 px-4 sm:px-0 sm:h-screen">
 	<div class="sm:py-16 sm:px-32 sm:flex sm:w-full sm:items-center">
 		<div class="sm:w-1/2">
 			<div>
@@ -55,14 +55,14 @@
 				<p class="mt-2">Выгодные цены, скидки и интересные предложения.</p>
 			</div>
             <form on:submit|preventDefault={submit}  class="bg-white hidden sm:flex mt-12 shadow-sm flex-col sm:flex-row gap-5 sm:mt-14 p-8 rounded">
-               <input bind:value={name} placeholder="Ваше имя" class="p-3 border-[#5c677d] w-full border rounded" type="text" name="" id="">
+               <input bind:value={name} placeholder="Ваше имя" class="p-3 border-[#5C677D]/50 w-full border rounded" type="text" name="" id="">
                 <input
 					use:imask={options}
 					on:accept={accept}
 					on:complete={complete}
 								bind:value={number}
 								placeholder="Номер телефона"
-								class="p-3 w-full border border-[#5c677d] rounded"
+								class="p-3 w-full border border-[#5C677D]/50 rounded"
 								type="tel"
 							/>
                             <button on:click={decrement} class="p-3 w-full text-white bg-[#59AAA4] rounded">Отправить</button>
