@@ -1,28 +1,26 @@
 <script lang="ts">
 	import Logo1 from '$lib/image/Logo5.svg';
 	import Icon from '@iconify/svelte';
-	import { superx } from '../store';
+	import { superx,infoClean } from '../store';
+
 	import Phone from '$lib/image/Phone.svg';
 	import Vk from '$lib/image/Vk.svg';
-	import { polusex } from '../store';
 	import arrow from '$lib/image/arrow.svg';
 	import main1 from '$lib/image/main1.jpg';
 	import Windows2 from '../components/Windows2.svelte';
 	import Windows1 from '../components/Windows1.svelte';
-	import Supporting from '../components/Supporting.svelte';
-	import General from '../components/General.svelte';
-	import Afterrepair from '../components/Afterrepair.svelte';
-	import Washwin from '../components/Washwin.svelte';
 
 	import Main2 from '../components/Main2.svelte';
-	import { infoClean } from '../store';
+	import Usluga1 from '../components/usluga1.svelte';
+	import Usluga2 from '../components/usluga2.svelte';
+	import Usluga3 from '../components/usluga3.svelte';
+	import Usluga4 from '../components/usluga4.svelte';
 
 	function decrement() {
 		superx.update((c) => (c = true));
 	}
-
-	function decrement3() {
-		infoClean.update((x) => (x = true));
+	function decrement2() {
+		infoClean.update((c) => (c = true));
 	}
 	const rewars = [
 		{
@@ -51,43 +49,45 @@
 			id: 1,
 			name: 'Поддерживающая',
 			text: 'Вернем жилищу уют и сияющую чистоту. ',
-			price: '1800₽ '
+			price: '1800₽ ',
+			link: '/supporting'
 		},
 		{
 			id: 2,
 			name: 'Генеральная',
 			text: 'Чистота может быть идеальной',
-			price: '170-200₽  м<sup>2</sup>'
+			price: '170-200₽  м<sup>2</sup>',
+			link: '/general'
 		},
 		{
 			id: 3,
 			name: 'После ремонта',
 			text: 'Уберем всю пыль и грязь после ремонта',
-			price: '350-400₽  м<sup>2</sup>'
+			price: '350-400₽  м<sup>2</sup>',
+			link: '/afterrepair'
 		},
 		{
 			id: 4,
 			name: 'Мытье окон',
 			text: 'Смотрите на мир через чистые окна!',
-			price: '250₽  м<sup>2</sup>'
+			price: '250₽  м<sup>2</sup>',
+			link: '/washwin'
 		}
 	];
-
-	let table = '1'
+	let textSet = 'Поддерживающая'
 </script>
 
 <Windows2 />
 <Windows1 />
-{#if table === 'Поддерживающая'}
-<Supporting />
-{:else if table === 'Генеральная'}
-<General />
-{:else if table === 'После ремонта'}
-<Afterrepair/>
-{:else if table === 'Мытье окон'}
-<Washwin/>
+{#if textSet === 'Поддерживающая'}
+<Usluga1 />
+	{:else if textSet === 'Генеральная'}
+<Usluga2 />
+{:else if textSet === 'После ремонта'}
+<Usluga3 />
+{:else if textSet === 'Мытье окон'}
+<Usluga4 />
 {/if}
-
 <div data-scroll-section class="bg-white">
 	<div
 		class="lg:mx-32 sm:mx-14 mx-4 gap-10  sm:pt-14 sm:flex items-center sm:pb-32 justify-between"
@@ -135,12 +135,11 @@
 					</div>
 					<div class="flex sm:mt-14 mt-8 item-center  justify-between ">
 						<h1 class="text-xl font-medium sm:text-lg">от {@html i.price}</h1>
-						<button on:click={() => table = i.name} on:click={decrement3}>
+						<button on:click={decrement2} on:click={()=> textSet = i.name}>
 							<Icon width="22" color="#33415c" hight="22" icon="codicon:info" />
 						</button>
 					</div>
 				</div>
-
 			{/each}
 		</div>
 	</div>
@@ -159,7 +158,9 @@
 					улучшить наш сервис
 				</p>
 				<div class="sm:flex  pb-14 sm:pb-0 sm:mb-10 lg:mb-0  pt-7 gap-3 items-center">
-					<p class="lg:text-base text-sm hidden sm:flex font-semibold uppercase text-[#59AAA4]">Оставить отзыв</p>
+					<p class="lg:text-base text-sm hidden sm:flex font-semibold uppercase text-[#59AAA4]">
+						Оставить отзыв
+					</p>
 					<button
 						on:click={decrement}
 						class="lg:p-4 lg:px-4 px-2 p-2 hidden  hover:scale-125 duration-300 sm:flex items-center justify-center rounded-full bg-[#59AAA4]"
@@ -190,12 +191,14 @@
 		<div class="lg:mx-32  pb-8 sm:py-0  mx-4 sm:pt-36">
 			<div class=" sm:flex sm:justify-between sm:items-end">
 				<div>
-					<h2 class="font-medium  sm:text-2xl text-3xl lg:text-[40px] lg:leading-[2.9rem]">Возникли вопросы?</h2>
+					<h2 class="font-medium  sm:text-2xl text-3xl lg:text-[40px] lg:leading-[2.9rem]">
+						Возникли вопросы?
+					</h2>
 				</div>
 				<div>
 					<p class="lg:text-lg mt-4 sm:mt-4 mt-4">
-						Позвоните по номеру 20-90-35 или оставьте свои контакты <br class="hidden lg:flex"/> наши менеджеры свяжутся с
-						вами в ближайшее время!
+						Позвоните по номеру 20-90-35 или оставьте свои контакты <br class="hidden lg:flex" /> наши
+						менеджеры свяжутся с вами в ближайшее время!
 					</p>
 				</div>
 			</div>
@@ -226,13 +229,13 @@
 </main>
 
 <div class="bg-[#59AAA4]  flex" data-scroll-section>
-	<div class="sm:mx-32 w-full mx-4 py-16">
+	<div class="lg:mx-32 w-full mx-4 py-16">
 		<div class="flex justify-between items-center">
 			<div>
 				<img class="w-48 sm:w-52" src={Logo1} alt="" />
 			</div>
 			<div class="flex items-center gap-7 sm:pt-3">
-				<a class=" hidden text-white sm:flex font-semibold" href="tel:+79131489035"
+				<a class=" hidden text-white lg:flex font-semibold" href="tel:+79131489035"
 					>+7 (913) 148-90-35</a
 				>
 				<a
@@ -252,7 +255,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="scss">
 	.filter-white {
 		filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(86deg) brightness(228%)
 			contrast(119%);

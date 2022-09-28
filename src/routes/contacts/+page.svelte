@@ -1,5 +1,6 @@
 
 <script>
+
   var map;
 
 DG.then(function () {
@@ -12,7 +13,7 @@ DG.then(function () {
 });
 </script>
 
-<div  data-scroll-section class=" sm:w-full pt-5 sm:mt-0 bg-white sm:h-screen">
+<div data-scroll-section class=" sm:w-full pt-5 sm:mt-0 bg-white sm:h-screen">
 	<div class=" sm:px-32 px-4  flex-col sm:flex sm:w-full">
 		<div class="sm:flex justify-between pt-14 items-center">
             <div>
