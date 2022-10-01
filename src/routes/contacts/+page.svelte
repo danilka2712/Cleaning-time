@@ -13,6 +13,11 @@ DG.then(function () {
 });
 </script>
 
+<svelte:head>
+	<meta name="description" content="Время Уборки - Клининговая компания. Омск, Шукшина 11. +7 (913) 148-90-35. Клининговая компания Омская область ВРЕМЯ УБОРКИ. Клининг квартир, домов, офисов. Генеральная уборка. Уборка после ремонта в Омске. ">
+	<title>Контакты | Клининг</title>
+</svelte:head>
+
 <div data-scroll-section class=" sm:w-full pt-5 sm:mt-0 bg-white sm:h-screen">
 	<div class=" sm:px-32 px-4  flex-col sm:flex sm:w-full">
 		<div class="sm:flex justify-between pt-14 items-center">

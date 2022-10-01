@@ -73,7 +73,7 @@
 			<div class="flex mt-5  flex-col">
 				<form on:submit|preventDefault={submit} class="">
 					<p class=" text-sm">Общая площадь</p>
-					<div class="mt-3 lg:flex hidden gap-5">
+					<div class="mt-3 xl:flex hidden gap-5">
 						{#each metr as m}
 							<div
 								on:click={() => (metrow = m.metr)}
@@ -84,7 +84,7 @@
 							</div>
 						{/each}
 					</div>
-					<div class="mt-3 lg:hidden flex justify-between">
+					<div class="mt-3 xl:hidden flex justify-between">
 						{#each metrMob as m}
 							<div
 								on:click={() => (metrow = m.metr)}

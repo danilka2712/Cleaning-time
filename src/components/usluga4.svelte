@@ -25,9 +25,9 @@
 				</div>
 
 				<ul class="list-outside py-5">
-					<li class="text-base pb-2 pt-6">– Стеклопакеты с 2-х сторон;</li>
-					<li class="text-base pb-2">– Откосы, рамы, отливы, уплотнители;</li>
-					<li class="text-base pb-2">– Подоконники;</li>
+					<li class="text-base pb-2 pt-6">– Стеклопакеты с 2-х сторон</li>
+					<li class="text-base pb-2">– Откосы, рамы, отливы, уплотнители</li>
+					<li class="text-base pb-2">– Подоконники</li>
 					<li class="text-base pb-2">– Москитные сетки.</li>
 				</ul>
 				<p class="text-sm">

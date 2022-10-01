@@ -16,21 +16,16 @@
 		getSpeed: true,
 		inertia: 0.7
 	}}
-	
 	watch={$page}
 	location={$page.url}
 	onLocationChange={(scroll) => scroll.scrollTo(0, { duration: 2, disableLerp: false })}
 	imageTarget={'.grid-item-media'}
 >
-	<header
-		data-scroll-section
-		class:active2={$page.url.pathname === '/stocks'}
-		class="bg-white"
-	>
-		<div class="lg:mx-32 sm:mx-14  mx-4 pt-5 flex justify-between sm:items-center">
-			<div class="flex items-center">
+	<header data-scroll-section class:active2={$page.url.pathname === '/stocks'} class="bg-white">
+		<div class="xl:mx-32 lg:mx-10 sm:mx-14  mx-4 pt-5 flex justify-between sm:items-center">
+			<a href="/" class="flex items-center">
 				<img class="w-48 sm:w-52" src={Logo} alt="" />
-			</div>
+			</a>
 			<div class="pt-2">
 				<ul class="lg:flex hidden gap-8 font-medium">
 					<a class:active={$page.url.pathname === '/'} href="/">Главная</a>
@@ -59,7 +54,6 @@
 </LocomotiveScrollProvider>
 
 <style>
-	
 	.active {
 		color: #59aaa4;
 	}
