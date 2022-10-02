@@ -6,6 +6,7 @@
 	import Vk from '$lib/image/Vk.svg';
 	import { page } from '$app/stores';
 	import '../app.css';
+	import Icon from '@iconify/svelte';
 </script>
 
 <LocomotiveScrollProvider
@@ -46,6 +47,12 @@
 					href="https://vk.com/"
 				>
 					<img class="w-7" src={Vk} alt="" />
+				</a>
+				<a
+					class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10"
+					href="https://vk.com/"
+				>
+				<Icon width='24' icon="eva:menu-fill" color="#33415c" />
 				</a>
 			</div>
 		</div>
