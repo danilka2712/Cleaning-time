@@ -48,12 +48,12 @@
 				>
 					<img class="w-7" src={Vk} alt="" />
 				</a>
-				<a
-					class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10"
+				<button
+					class="flex items-center justify-center rounded-full sm:w-10 sm:h-10"
 					href="https://vk.com/"
 				>
-				<Icon icon="mdi:microsoft-xbox-controller-menu" color="#33415c" width="28" />
-				</a>
+				<Icon icon="ion:menu" color="#33415c" width="28" />
+				</button>
 			</div>
 		</div>
 	</header>
