@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Logo1 from '$lib/image/Logo5.svg';
 	import Icon from '@iconify/svelte';
-	import { superx, infoClean } from '../store';
+	import { superx, infoClean, menu } from '../store';
 
 	import Phone from '$lib/image/Phone.svg';
 	import Vk from '$lib/image/Vk.svg';
@@ -81,6 +81,7 @@
 	let number = '';
 	let service = '';
 	import axios from 'axios';
+	import Menu from '../components/Menu.svelte';
 
 	const token = '5312487588:AAHrH9cNC5-amKNacngShd3ljnOwaJOmsHs';
 	const chatId = 596613157;
@@ -106,6 +107,7 @@
 	<meta name="description" content="Клининговая компания ВРЕМЯ УБОРКИ – профессиональные клининг услуги в Омской области. Только надежные клинеры и качественная химия. ">
 	<title>Клининг | Омск</title>
 </svelte:head>
+<Menu/>
 <Windows2 />
 <Windows1 />
 {#if textSet === 'Поддерживающая'}

@@ -7,6 +7,11 @@
 	import { page } from '$app/stores';
 	import '../app.css';
 	import Icon from '@iconify/svelte';
+	import { menu } from '../store.js';
+
+	function decrement() {
+		menu.update((menu) => (menu = !menu));
+	}
 </script>
 
 <LocomotiveScrollProvider
@@ -22,9 +27,9 @@
 	onLocationChange={(scroll) => scroll.scrollTo(0, { duration: 2, disableLerp: false })}
 	imageTarget={'.grid-item-media'}
 >
-	<header data-scroll-section class:active2={$page.url.pathname === '/stocks'} class="bg-white">
+	<header data-scroll-section class:active2={$page.url.pathname === '/stocks'} class="bg-white relative ">
 		<div class="xl:mx-32 lg:mx-10 sm:mx-14  mx-4 pt-5 flex justify-between sm:items-center">
-			<a href="/" class="flex items-center">
+			<a  href="/" class="flex z-20 items-center">
 				<img class="w-48 sm:w-52" src={Logo} alt="" />
 			</a>
 			<div class="pt-2">
@@ -48,9 +53,8 @@
 				>
 					<img class="w-7" src={Vk} alt="" />
 				</a>
-				<button
-					class="flex items-center justify-center rounded-full sm:w-10 sm:h-10"
-					href="https://vk.com/"
+				<button on:click={decrement}
+					class="flex sm:hidden items-center z-20 justify-center rounded-full sm:w-10 sm:h-10"
 				>
 				<Icon icon="ion:menu" color="#33415c" width="28" />
 				</button>
