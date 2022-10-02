@@ -1,6 +1,7 @@
 <script>
 	import Act1 from '../../lib/image/Act1.svg';
 	import Act2 from '../../lib/image/Act2.svg';
+	import Menu from '../../components/Menu.svelte';
 
 	import axios from 'axios';
 	import { polusex } from '../../store';
@@ -48,9 +49,11 @@
 	<meta name="description" content="Безупречный клининг — хорошо, а дополнительные скидки и подарки ещё лучше! Скидка за репост! Скидка на первый заказ!">
 	<title>Акции | Клининг</title>
 </svelte:head>
-<div data-scroll-section class="box sm:w-full sm:mt-0 px-4 sm:px-0 sm:h-screen">
+<Menu/>
+
+<div data-scroll-section class="box sm:w-full sm:mt-0 pt-5 px-4 sm:px-0 sm:h-screen">
 	<div class="sm:py-16 sm:px-32 sm:flex sm:w-full sm:items-center">
-		<div class="sm:w-1/2">
+		<div class="sm:w-1/2 pt-14">
 			<div>
 				<h2 class="font-medium text-3xl sm:text-[40px] sm:leading-[2.9rem]">
 					Ни дня без скидок<br />
