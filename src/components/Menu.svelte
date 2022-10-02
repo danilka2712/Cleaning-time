@@ -4,7 +4,7 @@
 
 	import { menu } from '../store';
     function decrement() {
-		menu.update((menu) => (menu = !menu));
+		menu.update((menu) => (menu = false));
 	}
 </script>
 {#if $menu}
