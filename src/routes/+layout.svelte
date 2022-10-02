@@ -52,7 +52,7 @@
 					class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10"
 					href="https://vk.com/"
 				>
-				<Icon width='28' icon="eva:menu-fill" color="#33415c" />
+				<Icon icon="mdi:microsoft-xbox-controller-menu" color="#33415c" width="28" />
 				</a>
 			</div>
 		</div>
