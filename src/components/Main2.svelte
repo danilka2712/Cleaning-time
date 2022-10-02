@@ -61,7 +61,7 @@
 
 <div data-scroll-section class="lg:h-screen bg-[#F3F6FB] lg:py-0 py-12  lg:mt-0">
 	<div
-		class="flex-col-reverse lg:gap-32 sm:items-center flex pt-24 pb-8 sm:py-0 sm:flex-row sm:mx-0 mx-4 "
+		class="flex-col-reverse lg:gap-32 sm:items-center flex sm:pt-20 pt-6 pb-8 sm:py-0 sm:flex-row sm:mx-0 mx-4 "
 	>
 		<div>
 			<img class="lg:h-screen  lg:w-[49.5vw] " src={main2} alt="" />

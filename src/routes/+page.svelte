@@ -170,6 +170,9 @@
 					</div>
 				</div>
 			{/each}
+				<a sveltekit:reload class="flex mt-4 lg:col-span-4 text-[#5c677d] sm:col-span-4 justify-end items-center gap-2 " href="/services">Все услуги<Icon icon="bi:arrow-right" color="#5c677d" /></a>
+
+
 		</div>
 	</div>
 

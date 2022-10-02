@@ -11,7 +11,7 @@
 {#if $infoClean}
 	<div
 		transition:fade={{ delay: 250, duration: 300 }}
-		class="w-screen fixed top-0 z-20 bg-[#33415C]/30 shadow-xl h-screen"
+		class="w-screen fixed right-0  top-0 z-20 bg-[#33415C]/30 shadow-xl h-screen"
 	>
 		<div
 			transition:slide={{ delay: 250, duration: 300, easing: quintOut }}
