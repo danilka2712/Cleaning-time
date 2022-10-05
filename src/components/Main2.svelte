@@ -132,14 +132,14 @@
 								on:click={() => (option = 'Телефон')}
 								class="p-3 px-4  border-2 border-[#5c677d] rounded flex items-center justify-center"
 							>
-								<Icon icon="carbon:phone-voice-filled" />
+							<Icon icon="bxs:phone-call" width="20" />
 							</div>
 							<div
 								class:activeOption={option === 'Телеграм'}
 								on:click={() => (option = 'Телеграм')}
 								class="p-3 px-4  border-2 border-[#5c677d] rounded flex items-center justify-center"
 							>
-								<Icon icon="file-icons:telegram" />
+							<Icon icon="bxl:telegram" width="20" />
 							</div>
 						</div>
 					</div>

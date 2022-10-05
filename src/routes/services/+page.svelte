@@ -1,5 +1,6 @@
 <script>
     	import service from '../../lib/image/Service.jpg';
+		import Menu from '../../components/Menu.svelte';
 
 	const items = [
 		{ id: 1, text: 'Генеральная уборка', price: '170-200' },
@@ -28,6 +29,8 @@
 	/>
 	<title>Услуги | Клининг</title>
 </svelte:head>
+<Menu/>
+
 <div data-scroll-section class="sm:w-full bg-white sm:mt-0 mt-14 px-4 sm:px-0 sm:h-screen">
 	<div class="sm:py-16 sm:px-32 sm:flex lg:items-center sm:w-full ">
 		<div class="sm:w-1/2">

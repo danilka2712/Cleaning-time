@@ -2,8 +2,6 @@
 	import LocomotiveScrollProvider from 'svelte-locomotive-scroll';
 	import 'locomotive-scroll/src/locomotive-scroll.scss';
 	import Logo from '$lib/image/Logo4.svg';
-	import Phone from '$lib/image/Phone.svg';
-	import Vk from '$lib/image/Vk.svg';
 	import { page } from '$app/stores';
 	import '../app.css';
 	import Icon from '@iconify/svelte';
@@ -27,9 +25,13 @@
 	onLocationChange={(scroll) => scroll.scrollTo(0, { duration: 2, disableLerp: false })}
 	imageTarget={'.grid-item-media'}
 >
-	<header data-scroll-section class:active2={$page.url.pathname === '/stocks'} class="bg-white relative ">
+	<header
+		data-scroll-section
+		class:active2={$page.url.pathname === '/stocks'}
+		class="bg-white relative "
+	>
 		<div class="xl:mx-32 lg:mx-10 sm:mx-14  mx-4 pt-5 flex justify-between sm:items-center">
-			<a  href="/" class="flex z-20 items-center">
+			<a href="/" class="flex z-20 items-center">
 				<img class="w-48 sm:w-52" src={Logo} alt="" />
 			</a>
 			<div class="pt-2">
@@ -45,18 +47,20 @@
 					class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10"
 					href="tel:+79131489035"
 				>
-					<img class="w-5 box" src={Phone} alt="" />
+					<Icon icon="bxs:phone-call" color="#33415c" width="28" />
 				</a>
 				<a
 					class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10"
-					href="https://vk.com/"
+					href="https://instagram.com/vremya.uborki.omsk?igshid=YmMyMTA2M2Y=
+					"
 				>
-					<img class="w-7" src={Vk} alt="" />
+					<Icon icon="bxl:instagram-alt" color="#33415c" width="28" />
 				</a>
-				<button on:click={decrement}
+				<button
+					on:click={decrement}
 					class="flex sm:hidden items-center z-20 justify-center rounded-full sm:w-10 sm:h-10"
 				>
-				<Icon icon="ion:menu" color="#33415c" width="28" />
+					<Icon icon="ion:menu" color="#33415c" width="28" />
 				</button>
 			</div>
 		</div>
