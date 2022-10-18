@@ -30,7 +30,7 @@
 		class:active2={$page.url.pathname === '/stocks'}
 		class="bg-white relative "
 	>
-		<div class="xl:mx-32 lg:mx-10 sm:mx-14  mx-4 pt-5 flex justify-between sm:items-center">
+		<div class="xl:mx-32 lg:mx-10 sm:mx-8  mx-4 pt-5 flex justify-between sm:items-center">
 			<a href="/" class="flex z-20 items-center">
 				<img class="w-48 sm:w-52" src={Logo} alt="" />
 			</a>

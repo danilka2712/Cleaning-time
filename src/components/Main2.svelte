@@ -66,7 +66,7 @@
 		<div>
 			<img class="lg:h-screen  lg:w-[49.5vw] " src={main2} alt="" />
 		</div>
-		<div class="sm:mx-12 lg:mx-0">
+		<div class="sm:mx-8 lg:mx-0">
 			<h2 class="font-medium  sm:text-2xl text-3xl lg:text-[40px] lg:leading-[2.9rem]">
 				Мы работаем<br />вы отдыхаете
 			</h2>

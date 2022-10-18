@@ -3,18 +3,17 @@
 	import Icon from '@iconify/svelte';
 	import { superx, infoClean, menu } from '../store';
 
-	import Phone from '$lib/image/Phone.svg';
-	import Vk from '$lib/image/Vk.svg';
-	import arrow from '$lib/image/arrow.svg';
-	import main1 from '$lib/image/main1.jpg';
 	import Windows2 from '../components/Windows2.svelte';
 	import Windows1 from '../components/Windows1.svelte';
+	import arrow from '../lib/image/arrow.svg';
+	import main1 from '../lib/image/main1.jpg';
 
 	import Main2 from '../components/Main2.svelte';
 	import Usluga1 from '../components/usluga1.svelte';
 	import Usluga2 from '../components/usluga2.svelte';
 	import Usluga3 from '../components/usluga3.svelte';
 	import Usluga4 from '../components/usluga4.svelte';
+
 
 	function decrement() {
 		superx.update((c) => (c = true));
@@ -101,13 +100,16 @@
 			);
 		polusex.update((c) => (c = true));
 	}
-
 </script>
+
 <svelte:head>
-	<meta name="description" content="Клининговая компания ВРЕМЯ УБОРКИ – профессиональные клининг услуги в Омской области. Только надежные клинеры и качественная химия. ">
+	<meta
+		name="description"
+		content="Клининговая компания ВРЕМЯ УБОРКИ – профессиональные клининг услуги в Омской области. Только надежные клинеры и качественная химия. "
+	/>
 	<title>Клининг | Омск</title>
 </svelte:head>
-<Menu/>
+<Menu />
 <Windows2 />
 <Windows1 />
 {#if textSet === 'Поддерживающая'}
@@ -121,7 +123,7 @@
 {/if}
 <div data-scroll-section class="bg-white">
 	<div
-		class="xl:mx-32 lg:mx-10 sm:mx-14 mx-4 gap-10  sm:pt-14 sm:flex items-center sm:pb-32 justify-between"
+		class="xl:mx-32 lg:mx-10 sm:mx-8 mx-4 gap-10  sm:pt-14 sm:flex items-center sm:pb-32 justify-between"
 	>
 		<div class="">
 			<h1 class="lg:text-5xl pt-20 sm:pt-0 sm:mt-0 text-3xl font-medium">
@@ -156,10 +158,10 @@
 			</div>
 		</div>
 		<div
-			class=" grid lg:grid-cols-4 sm:grid-cols-2 xl:mx-32 lg:mx-10 sm:mx-14 mx-4 gap-5 sm:gap-8 justify-between "
+			class="grid lg:grid-cols-4 sm:grid-cols-2 xl:mx-32 lg:mx-10 sm:mx-8 mx-4 gap-5 sm:gap-8 justify-between "
 		>
 			{#each items as i}
-				<div class="bg-white rounded-lg w-full p-7">
+				<div class="bg-white  rounded-lg w-full h-fit p-7">
 					<div>
 						<h1 class=" text-xl sm:text-lg font-medium pb-4">{i.name}</h1>
 						<p class="text-lg sm:text-base">{i.text}</p>
@@ -172,16 +174,18 @@
 					</div>
 				</div>
 			{/each}
-				<a sveltekit:reload class="flex mt-4 lg:col-span-4 text-[#5c677d] sm:col-span-4 justify-end items-center gap-2 " href="/services">Все услуги<Icon icon="bi:arrow-right" color="#5c677d" /></a>
-
-
 		</div>
+		<a
+				sveltekit:reload
+				class="flex mt-10 xl:mx-32 lg:mx-10 sm:mx-14 lg:col-span-4 text-[#5c677d] sm:col-span-4 justify-end items-center gap-2 "
+				href="/services">Все услуги<Icon icon="bi:arrow-right" color="#5c677d" /></a
+			>
 	</div>
 
 	<Main2 />
 	<div data-scroll-section class="lg:h-screen bg-[#F3F6FB] lg:flex sm:gap-32 ">
 		<div
-			class="xl:mx-32 lg:mx-10 sm:mx-14 mx-4 lg:w-full pt-16 pb-8 sm:py-0  sm:items-center lg:flex"
+			class="xl:mx-32 lg:mx-10 sm:mx-8 mx-4 lg:w-full pt-16 pb-8 sm:py-0  sm:items-center lg:flex"
 		>
 			<div class="lg:w-1/2">
 				<h2 class="font-medium  sm:text-2xl text-3xl lg:text-[40px] lg:leading-[2.9rem]">
@@ -223,8 +227,8 @@
 			</div>
 		</div>
 	</div>
-	<div data-scroll-section class="sm:h-[80vh] lg:py-14 sm:py-0  bg-[#F3F6FB] ">
-		<div class="xl:mx-32 lg:mx-10  pb-8 sm:py-0  mx-4 sm:pt-36">
+	<div data-scroll-section class="lg:h-[80vh] sm:h-fit lg:py-14 py-10   bg-[#F3F6FB] ">
+		<div class=" pb-8 sm:py-12   xl:mx-32 lg:mx-10 sm:mx-8 mx-4 sm:pt-36">
 			<div class=" sm:flex sm:justify-between sm:items-end">
 				<div>
 					<h2 class="font-medium  sm:text-2xl text-3xl lg:text-[40px] lg:leading-[2.9rem]">
@@ -289,13 +293,14 @@
 					class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10"
 					href="tel:+79131489035"
 				>
-					<img class="w-5 filter-white" src={Phone} alt="" />
+					<Icon icon="bxs:phone-call" color="#ffffff" width="28" />
 				</a>
 				<a
 					class="hover:bg-blue-300/40 duration-300 flex items-center justify-center rounded-full sm:w-10 sm:h-10"
-					href="https://vk.com/"
+					href="https://instagram.com/vremya.uborki.omsk?igshid=YmMyMTA2M2Y=
+					"
 				>
-					<img class="w-7 filter-white" src={Vk} alt="" />
+					<Icon icon="bxl:instagram-alt" color="#ffffff" width="28" />
 				</a>
 			</div>
 		</div>

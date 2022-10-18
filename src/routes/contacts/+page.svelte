@@ -1,14 +1,16 @@
 <script>
 	import Menu from '../../components/Menu.svelte';
-
 	var map;
 
+	// @ts-ignore
 	DG.then(function () {
+		// @ts-ignore
 		map = DG.map('map', {
 			center: [55.018009, 73.35006],
 			zoom: 13
 		});
 
+		// @ts-ignore
 		DG.marker([55.018009, 73.35006]).addTo(map).bindPopup('Омск, Шукшина 11');
 	});
 </script>
@@ -22,7 +24,7 @@
 </svelte:head>
 <Menu />
 
-<div data-scroll-section class=" sm:w-full pt-5 sm:mt-0 bg-white sm:h-screen">
+<div  data-scroll-section class=" sm:w-full pt-5 sm:mt-0 bg-white sm:h-screen">
 	<div class=" sm:px-32 px-4  flex-col sm:flex sm:w-full">
 		<div class="sm:flex justify-between pt-14 items-center">
 			<div>
