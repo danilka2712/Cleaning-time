@@ -136,7 +136,7 @@
 			</p>
 		</div>
 		<div>
-			<img class=" sm:mt-0 mt-6" src={main1} alt="" />
+			<img class="object-cover sm:h-[32rem] h-[19rem] object-top w-[40rem] sm:mt-2 mt-6" src='IMG_3360.heic' alt="" />
 		</div>
 	</div>
 </div>
@@ -176,7 +176,7 @@
 		</div>
 		<a
 			sveltekit:reload
-			class="flex mt-10 xl:mx-32 lg:mx-10 sm:mx-14 lg:col-span-4 text-[#5c677d] sm:col-span-4 justify-end items-center gap-2 "
+			class="flex mt-10 xl:mx-32 mr-5 lg:mx-10 sm:mx-14 lg:col-span-4 text-[#5c677d] sm:col-span-4 justify-end items-center gap-2 "
 			href="/services">Все услуги<Icon icon="bi:arrow-right" color="#5c677d" /></a
 		>
 	</div>

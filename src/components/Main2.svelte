@@ -64,7 +64,7 @@
 		class="flex-col-reverse lg:gap-32 sm:items-center flex sm:pt-20 pt-6 pb-8 sm:py-0 sm:flex-row sm:mx-0 mx-4 "
 	>
 		<div>
-			<img class="lg:h-screen  lg:w-[49.5vw] " src={main2} alt="" />
+			<img class="lg:h-screen h-[24rem] object-cover  object-botton w-full   lg:w-[49.5vw] " src="bPV4WxfoAbc.jpg" alt="" />
 		</div>
 		<div class="sm:mx-8 lg:mx-0">
 			<h2 class="font-medium  sm:text-2xl text-3xl lg:text-[40px] lg:leading-[2.9rem]">
