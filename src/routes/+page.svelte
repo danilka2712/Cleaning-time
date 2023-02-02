@@ -14,7 +14,6 @@
 	import Usluga3 from '../components/usluga3.svelte';
 	import Usluga4 from '../components/usluga4.svelte';
 
-
 	function decrement() {
 		superx.update((c) => (c = true));
 	}
@@ -48,21 +47,21 @@
 			id: 1,
 			name: 'Поддерживающая',
 			text: 'Вернем жилищу уют и сияющую чистоту. ',
-			price: '1800₽ ',
+			price: '50-100₽ м<sup>2</sup>',
 			link: '/supporting'
 		},
 		{
 			id: 2,
 			name: 'Генеральная',
 			text: 'Чистота может быть идеальной',
-			price: '170-200₽  м<sup>2</sup>',
+			price: '100-150₽  м<sup>2</sup>',
 			link: '/general'
 		},
 		{
 			id: 3,
 			name: 'После ремонта',
 			text: 'Уберем всю пыль и грязь после ремонта',
-			price: '350-400₽  м<sup>2</sup>',
+			price: '200-300₽  м<sup>2</sup>',
 			link: '/afterrepair'
 		},
 		{
@@ -176,10 +175,10 @@
 			{/each}
 		</div>
 		<a
-				sveltekit:reload
-				class="flex mt-10 xl:mx-32 lg:mx-10 sm:mx-14 lg:col-span-4 text-[#5c677d] sm:col-span-4 justify-end items-center gap-2 "
-				href="/services">Все услуги<Icon icon="bi:arrow-right" color="#5c677d" /></a
-			>
+			sveltekit:reload
+			class="flex mt-10 xl:mx-32 lg:mx-10 sm:mx-14 lg:col-span-4 text-[#5c677d] sm:col-span-4 justify-end items-center gap-2 "
+			href="/services">Все услуги<Icon icon="bi:arrow-right" color="#5c677d" /></a
+		>
 	</div>
 
 	<Main2 />
@@ -192,7 +191,7 @@
 					Лучшие клиенты — <br />
 					наши клиенты!
 				</h2>
-				<p class="lg:text-lg mt-4 sm:mt-4 mt-4">
+				<p class="lg:text-lg sm:mt-4 mt-4">
 					Оставьте пожалуйста ваш отзыв<br />
 					благодаря ему мы будем знать как <br />
 					улучшить наш сервис
@@ -220,7 +219,6 @@
 						<div class=" bg-white p-7">
 							<h1 class=" lg:text-xl text-base font-semibold">{r.name}</h1>
 							<p class="lg:text-base text-sm pt-4">{r.text}</p>
-							<p class="text-[#59AAA4] pt-4 text-sm lg:text-base lg:font-medium">Все отзывы...</p>
 						</div>
 					{/each}
 				</div>

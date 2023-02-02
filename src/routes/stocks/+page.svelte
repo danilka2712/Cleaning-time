@@ -6,6 +6,7 @@
 	import axios from 'axios';
 	import { polusex } from '../../store';
 	import { imask } from '@imask/svelte';
+	import Windows1 from '../../components/Windows1.svelte';
 	let number = '';
 	let name = '';
 
@@ -29,7 +30,7 @@
 	const token = '5312487588:AAHrH9cNC5-amKNacngShd3ljnOwaJOmsHs';
 	const chatId = 596613157;
 	function submit() {
-		const fullMessage = `Расчет стоимости%0AНомер телефона: ${number}%0AИмя: ${name}`;
+		const fullMessage = `Новая заявка%0AНомер телефона: ${number}%0AИмя: ${name}`;
 		axios
 			.post(
 				`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${fullMessage}`
@@ -42,14 +43,19 @@
 					console.log(error);
 				}
 			);
+		polusex.update((c) => (c = true));
 	}
-	
 </script>
+
 <svelte:head>
-	<meta name="description" content="Безупречный клининг — хорошо, а дополнительные скидки и подарки ещё лучше! Скидка за репост! Скидка на первый заказ!">
+	<meta
+		name="description"
+		content="Безупречный клининг — хорошо, а дополнительные скидки и подарки ещё лучше! Скидка за репост! Скидка на первый заказ!"
+	/>
 	<title>Акции | Клининг</title>
 </svelte:head>
-<Menu/>
+<Menu />
+<Windows1 />
 
 <div data-scroll-section class="box sm:w-full sm:mt-0 pt-5 px-4 sm:px-0 sm:h-screen">
 	<div class="sm:py-16 sm:px-32 sm:flex sm:w-full sm:items-center">
