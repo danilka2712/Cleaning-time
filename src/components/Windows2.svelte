@@ -9,8 +9,8 @@ function closeWindow(){
 let name = ''
 let email = ''
 let text = ''
-const token = '5312487588:AAHrH9cNC5-amKNacngShd3ljnOwaJOmsHs';
-	const chatId = 596613157;
+const token = '6114170119:AAHBQ6vEnQ-PKJvws0ARcGRg9Ysypk5_aSo';
+	const chatId = 5631311370;
 	function submit() {
 		const fullMessage = `ОТЗЫВ%0AИмя: ${name}%0AEmail: ${email}%0AОтзыв: ${text}`;
 		axios
